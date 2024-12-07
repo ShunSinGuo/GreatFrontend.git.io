@@ -37,12 +37,11 @@ h1 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 45%); 
+  grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(2, 250px); 
   grid-gap: 20px;
 }
