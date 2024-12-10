@@ -44,13 +44,21 @@ body {
   width: calc(20% - 15px);
 }
 
-.collections label:first-child {
+.collections,
+.category,
+.colors,
+.rating {
   position: relative;
   display: block;
   cursor: pointer;
 }
 
-.collections label:first-child::after {
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.classification .token::after {
   content: '';
   position: absolute;
   top: 12px;
@@ -60,7 +68,7 @@ body {
   background: #201e1e;
 }
 
-.collections .shrinked::before {
+.classification .shrinked::before {
   content: '';
   position: absolute;
   top: 8px;
@@ -76,31 +84,46 @@ body {
   position: relative;
 }
 
-.collections-bar {
+.section-content {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 20px 5px;
+  margin: 20px 0 0 5px;
   gap: 20px;
   text-align: left;
   color: #777;
 }
 
-.collection-item {
-  display: flex;
-  align-items: center;
-}
-
-.collection-item input[type="checkbox"] {
+.section-content input[type="checkbox"] {
   margin-right: 10px;
   font-size: 16px;
   accent-color: #000;
   cursor: pointer;
 }
 
-.collection-item label {
+.section-content label {
   font-size: 14px;
   cursor: pointer;
 }
+
+.sectionC-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.sectionC-content input[type="radio"] {
+  display: none;
+}
+
+.sectionC-content label span {
+  display: inline-block;
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  overflow: hidden;
+  cursor: pointer;
+} 
 
 /* --------  products -------- */
 
