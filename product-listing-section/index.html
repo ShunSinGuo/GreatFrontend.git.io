@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <script src="https://kit.fontawesome.com/de17169b5d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -29,15 +30,32 @@
             <label class="token">Colors</label>
           </div>
           <hr />
-          <div class="rating" id="rating">
-            <label class="token">Rating</label>
-          </div>
-          <hr />
         </div>
       </div>
-
-      <div class="products-bar" id="products"></div>
+      
+      <div class="product-wrapper">
+        <div class="select-box">
+          <div class="select-menu">
+            <span class="sBox_text">sort By</span>
+            <i class="fa-duotone fa-solid fa-chevron-up"></i>
+          </div>
+          <ul class="options">
+            <li class="option">
+              <span class="option-text" data-sort="bestSeller">Best Sellers</span>
+            </li>
+            <li class="option">
+              <span class="option-text" data-sort="pricehightoLow">Price: High to Low</span>
+            </li>
+            <li class="option">
+              <span class="option-text" data-sort="pricelowtoHigh">Price: Low to High</span>
+            </li>
+          </ul>          
+        </div>
+        <div class="products-bar" id="products">
+        </div>
+      </div>
     </div>
+    
 
     <!-- Attribute this challenge to yourself! -->
     <div class="credits">

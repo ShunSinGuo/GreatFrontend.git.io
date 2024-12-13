@@ -127,27 +127,25 @@ hr {
 
 /* --------  products -------- */
 
-.products-bar {
+.product-wrapper {
   width: 80%;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-auto-rows: 450px;
-  grid-gap: 10px;
   overflow: hidden;
 }
 
-.products-bar .cards {
+.products-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 450px;
   position: relative;
+  width: 100%;  
 }
 
-.products-bar .cards img {
+.products-bar img {
   width: 300px;
   height: 300px;
-  border-radius: 10px;
-  object-position: 50% 50%;
   object-fit: cover;
-  transition: .5 ease-in infinite;
 }
+
 
 /* .products-bar .cards img:hover {
   scale: 1.5;
@@ -172,4 +170,55 @@ hr {
   border-radius: 50%;
 }
 
+/* --------  sortBy -------- */
 
+.select-box {
+  width: 120px;
+  height: 28px;
+  border:  1px solid #777;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  margin: 15px 85%;
+}
+
+.select-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px; 
+  font-size: 14px;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+.select-menu i {
+  font-size: 14px;
+  color: #777;
+  transform: rotate(180deg);
+}
+
+.options {
+  display: none;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  background-color: #fff;
+  border: 1px solid grey;
+  list-style-type: none;
+  z-index: 1;
+}
+
+.option:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+.options.active {
+  display: block;
+}
+
+.option-text {
+  font-size: 14px;
+}
